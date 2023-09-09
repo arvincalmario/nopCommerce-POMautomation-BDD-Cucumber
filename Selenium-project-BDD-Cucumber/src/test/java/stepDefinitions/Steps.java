@@ -1,16 +1,16 @@
 package stepDefinitions;
 
 import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.cucumber.java.en.*;
+import pageObjects.AddCustomerPage;
 import pageObjects.LoginPage;
 
-public class Steps {
-	
-	public WebDriver driver;
-	public LoginPage lp;
+public class Steps extends Base{
+		
+	//LOGIN STEP DEFINITIONS
 	
 	@Given("User Launch Chrome browser")
 	public void user_Launch_Chrome_browser()
@@ -65,6 +65,59 @@ public class Steps {
 		driver.quit();
 	}
 	
+	//CUSTOMER STEP DEFINITIONS
 	
+	@Then("User can view Dashboard")
+	public void user_can_view_dashboard() {		
+		addCust = new AddCustomerPage(driver);
+		Assert.assertEquals("Dashboard / nopCommerce administration", addCust.getTitlePage());
+	}
+
+	@When("User click on customers Menu")
+	public void user_click_on_customers_menu() throws InterruptedException {
+		Thread.sleep(2000);
+		addCust.clickCustomerMenu();
+	}
+
+	@When("click on customer Menu Item")
+	public void click_on_customer_menu_item() {
+		addCust.clickCustomerMenuItem();
+	}
+
+	@When("click on Add new button")
+	public void click_on_add_new_button() throws InterruptedException {
+		addCust.clickAddNewCustomer();
+		Thread.sleep(2000);
+	}
+
+	@Then("User can view Add new customer page")
+	public void user_can_view_add_new_customer_page() {
+		Assert.assertEquals("Add a new customer / nopCommerce administration", addCust.getTitlePage());
+	}
+
+	@When("User enter customer info")
+	public void user_enter_customer_info() throws InterruptedException {
+		String email = randomString() + "@gmail.com";
+		addCust.setEmail(email);
+		addCust.setPassword("test123");
+		addCust.setFirstName("Fname ACA");
+		addCust.setLastName("Lname ACA");
+		addCust.setGender("Female");
+		addCust.setDateOfBirth("12/25/1991"); // MM/DD/YYYY
+		addCust.setCompanyName("QA Automation");
+		addCust.setCustomerRoles("Guests");
+		addCust.setManagerOfVendor("Vendor 2");					
+	}
+
+	@When("click on Save button")
+	public void click_on_save_button() {
+		addCust.clickSave();
+	}
+
+	@Then("User can view confirmation message {string}")
+	public void user_can_view_confirmation_message(String string) {
+		Assert.assertTrue(driver.findElement(By.tagName("body")).getText().contains("The new customer has been added successfully"));
+		
+	}
 
 }
