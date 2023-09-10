@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.cucumber.java.en.*;
 import pageObjects.AddCustomerPage;
 import pageObjects.LoginPage;
+import pageObjects.SearchCustomerPage;
 
 public class Steps extends Base{
 		
@@ -65,7 +66,7 @@ public class Steps extends Base{
 		driver.quit();
 	}
 	
-	//CUSTOMER STEP DEFINITIONS
+	//ADD CUSTOMER STEP DEFINITIONS
 	
 	@Then("User can view Dashboard")
 	public void user_can_view_dashboard() {		
@@ -73,9 +74,9 @@ public class Steps extends Base{
 		Assert.assertEquals("Dashboard / nopCommerce administration", addCust.getTitlePage());
 	}
 
-	@When("User click on customers Menu")
+	@When("User click on customers menu")
 	public void user_click_on_customers_menu() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		addCust.clickCustomerMenu();
 	}
 
@@ -87,7 +88,7 @@ public class Steps extends Base{
 	@When("click on Add new button")
 	public void click_on_add_new_button() throws InterruptedException {
 		addCust.clickAddNewCustomer();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 	}
 
 	@Then("User can view Add new customer page")
@@ -117,7 +118,35 @@ public class Steps extends Base{
 	@Then("User can view confirmation message {string}")
 	public void user_can_view_confirmation_message(String string) {
 		Assert.assertTrue(driver.findElement(By.tagName("body")).getText().contains("The new customer has been added successfully"));
-		
 	}
+	
+	//SEARCH CUSTOMER STEP DEFINITIONS
+	
+//	@When("click on Search icon")
+//	public void click_on_Search_icon() throws InterruptedException {
+//	    searchCust.searchIcon();
+//	    Thread.sleep(2000);
+//	}
+	
+	@When("Enter customer email")
+	public void enter_customer_email() {		
+		searchCust = new SearchCustomerPage(driver);
+		searchCust.setSearchEmail("victoria_victoria@nopCommerce.com");
+
+	}
+
+	@When("Click on search button")
+	public void click_on_search_button() throws InterruptedException {
+	    searchCust.clickSearch();
+	    Thread.sleep(2000);
+	}
+
+	@Then("User should found Email in the Search table")
+	public void user_should_found_email_in_the_search_table() {
+	    
+		boolean status = searchCust.searchCustomerByEmail("victoria_victoria@nopCommerce.com");		
+		Assert.assertEquals(true, status);
+	}
+
 
 }

@@ -6,7 +6,7 @@ Scenario: Add a new Customer
     And User enters email as "admin@yourstore.com" and password as "admin"
     And Click on Login
     Then User can view Dashboard
-    When User click on customers Menu
+    When User click on customers menu
     And click on customer Menu Item
     And click on Add new button 
     Then User can view Add new customer page
@@ -14,3 +14,17 @@ Scenario: Add a new Customer
     And click on Save button
     Then User can view confirmation message "The new customer has been added successfully"
     And close browser
+    
+
+Scenario: Search Customer by EmailID
+	Given User Launch Chrome browser
+    When User opens URL "https://admin-demo.nopcommerce.com/login"
+    And User enters email as "admin@yourstore.com" and password as "admin"
+    And Click on Login
+    Then User can view Dashboard
+	When User click on customers menu
+	And click on customer Menu Item
+	And Enter customer email
+	When Click on search button
+	Then User should found Email in the Search table
+	And close browser
