@@ -8,10 +8,11 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		
-		features = ".//features/Customers.feature",
+		features = {".//features/"},
 		glue = "stepDefinitions",
 		dryRun = false,
 		plugin = {"pretty","html:test-output.html"}
+		//tags = {"@sanity","@regression"} //OR statement, if AND it should be {"@sanity" , "@regression}
 		
 		)
 

@@ -1,9 +1,18 @@
 package stepDefinitions;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
+import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 import pageObjects.AddCustomerPage;
 import pageObjects.LoginPage;
@@ -11,20 +20,48 @@ import pageObjects.SearchCustomerPage;
 
 public class Steps extends Base{
 		
+	@Before
+	public void setup() throws IOException {
+		
+		logger = Logger.getLogger("nopCommerce"); //Added logger
+		PropertyConfigurator.configure("log4j.properties"); //Added logger
+		
+		//Reading Properties
+		configProperties = new Properties();
+		FileInputStream configPropfile = new FileInputStream("config.properties");
+		configProperties.load(configPropfile);
+				
+		String br = configProperties.getProperty("browser");
+		
+		if(br.equals("chrome")) {
+			System.setProperty("webdriver.chrome.driver", configProperties.getProperty("chromepath"));
+			driver = new ChromeDriver();
+		}else if(br.equals("firefox")) {
+			System.setProperty("webdriver.gecko.driver", configProperties.getProperty("firefoxpath"));
+			driver = new FirefoxDriver();
+		}else {
+			System.setProperty("webdriver.edge.driver", configProperties.getProperty("edgepath"));
+			driver = new EdgeDriver();
+		}
+			
+		
+		
+		logger.info("******* Launching Browser *******");
+		
+	}
+	
 	//LOGIN STEP DEFINITIONS
 	
 	@Given("User Launch Chrome browser")
 	public void user_Launch_Chrome_browser()
 	{
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//drivers/chromedriver.exe");
-		driver = new ChromeDriver();
-		
 		lp = new LoginPage(driver);
 	}
 	
 	@When("User opens URL {string}")
 	public void user_opens_URL(String url)
 	{
+		logger.info("******* Opening URL *******");
 		driver.get(url);
 		driver.manage().window().maximize();
 	}
@@ -32,6 +69,7 @@ public class Steps extends Base{
 	@When("User enters email as {string} and password as {string}")
 	public void user_enters_email_as_and_password_as(String email, String password)
 	{
+		logger.info("******* Providing email and password *******");
 		lp.setUserName(email);
 		lp.setPassword(password);
 	}
@@ -39,6 +77,7 @@ public class Steps extends Base{
 	@When("Click on Login")
 	public void click_on_Login()
 	{
+		logger.info("******* Triggering Log in button *******");
 		lp.clickLogin();
 	}
 	
@@ -87,6 +126,7 @@ public class Steps extends Base{
 
 	@When("click on Add new button")
 	public void click_on_add_new_button() throws InterruptedException {
+		logger.info("******* Trigger Add customer button *******");
 		addCust.clickAddNewCustomer();
 		Thread.sleep(1000);
 	}
@@ -98,6 +138,7 @@ public class Steps extends Base{
 
 	@When("User enter customer info")
 	public void user_enter_customer_info() throws InterruptedException {
+		logger.info("******* Adding new customer information *******");
 		String email = randomString() + "@gmail.com";
 		addCust.setEmail(email);
 		addCust.setPassword("test123");
@@ -112,6 +153,7 @@ public class Steps extends Base{
 
 	@When("click on Save button")
 	public void click_on_save_button() {
+		logger.info("******* Triggering save button *******");
 		addCust.clickSave();
 	}
 
@@ -120,16 +162,11 @@ public class Steps extends Base{
 		Assert.assertTrue(driver.findElement(By.tagName("body")).getText().contains("The new customer has been added successfully"));
 	}
 	
-	//SEARCH CUSTOMER STEP DEFINITIONS
-	
-//	@When("click on Search icon")
-//	public void click_on_Search_icon() throws InterruptedException {
-//	    searchCust.searchIcon();
-//	    Thread.sleep(2000);
-//	}
-	
+	//SEARCH CUSTOMER EMAIL STEP DEFINITIONS
+		
 	@When("Enter customer email")
-	public void enter_customer_email() {		
+	public void enter_customer_email() {
+		logger.info("******* Searching customer email *******");
 		searchCust = new SearchCustomerPage(driver);
 		searchCust.setSearchEmail("victoria_victoria@nopCommerce.com");
 
@@ -147,6 +184,31 @@ public class Steps extends Base{
 		boolean status = searchCust.searchCustomerByEmail("victoria_victoria@nopCommerce.com");		
 		Assert.assertEquals(true, status);
 	}
+	
+	//SEARCH CUSTOMER NAME STEP DEFINITIONS
+	
+	@When("Enter customer First Name")
+	public void enter_customer_first_name() {
+		logger.info("******* Searching customer first name *******");
+		searchCust = new SearchCustomerPage(driver);
+		searchCust.setSearchFirstName("Victoria");
+
+	}
+	@When("Enter customer Last Name")
+	public void enter_customer_last_name() {
+		logger.info("******* Searching customer last name *******");
+		searchCust.setSearchLastName("Terces");
+
+	}
+	@Then("User should found Name in the Search table")
+	public void user_should_found_name_in_the_search_table() {
+		boolean status = searchCust.searchCustomerByName("Victoria Terces");
+		Assert.assertEquals(true, status);
+
+	}
+
+
+
 
 
 }

@@ -1,0 +1,120 @@
+2023-09-11 13:34:20,714 [main] INFO nopCommerce - ******* Launching Browser *******
+2023-09-11 13:34:20,737 [main] INFO nopCommerce - ******* Opening URL *******
+2023-09-11 13:34:21,384 [main] INFO nopCommerce - ******* Providing email and password *******
+2023-09-11 13:34:21,547 [main] INFO nopCommerce - ******* Triggering Log in button *******
+2023-09-11 13:34:24,840 [main] INFO nopCommerce - ******* Trigger Add customer button *******
+2023-09-11 13:34:26,617 [main] INFO nopCommerce - ******* Adding new customer information *******
+2023-09-11 13:34:30,196 [main] INFO nopCommerce - ******* Triggering save button *******
+2023-09-11 13:34:32,066 [main] INFO nopCommerce - ******* Launching Browser *******
+2023-09-11 13:34:32,069 [main] INFO nopCommerce - ******* Opening URL *******
+2023-09-11 13:34:33,141 [main] INFO nopCommerce - ******* Providing email and password *******
+2023-09-11 13:34:33,303 [main] INFO nopCommerce - ******* Triggering Log in button *******
+2023-09-11 13:34:36,590 [main] INFO nopCommerce - ******* Searching customer email *******
+2023-09-11 13:34:39,759 [main] INFO nopCommerce - ******* Launching Browser *******
+2023-09-11 13:34:39,761 [main] INFO nopCommerce - ******* Opening URL *******
+2023-09-11 13:34:40,388 [main] INFO nopCommerce - ******* Providing email and password *******
+2023-09-11 13:34:40,551 [main] INFO nopCommerce - ******* Triggering Log in button *******
+2023-09-11 13:34:43,916 [main] INFO nopCommerce - ******* Searching customer first name *******
+2023-09-11 13:34:44,013 [main] INFO nopCommerce - ******* Searching customer last name *******
+2023-09-11 13:34:47,221 [main] INFO nopCommerce - ******* Launching Browser *******
+2023-09-11 13:34:47,222 [main] INFO nopCommerce - ******* Opening URL *******
+2023-09-11 13:34:47,843 [main] INFO nopCommerce - ******* Providing email and password *******
+2023-09-11 13:34:48,025 [main] INFO nopCommerce - ******* Triggering Log in button *******
+2023-09-11 13:34:53,994 [main] INFO nopCommerce - ******* Launching Browser *******
+2023-09-11 13:34:53,995 [main] INFO nopCommerce - ******* Opening URL *******
+2023-09-11 13:34:54,611 [main] INFO nopCommerce - ******* Providing email and password *******
+2023-09-11 13:34:54,784 [main] INFO nopCommerce - ******* Triggering Log in button *******
+2023-09-11 13:35:00,856 [main] INFO nopCommerce - ******* Launching Browser *******
+2023-09-11 13:35:00,857 [main] INFO nopCommerce - ******* Opening URL *******
+2023-09-11 13:35:01,702 [main] INFO nopCommerce - ******* Providing email and password *******
+2023-09-11 13:35:01,889 [main] INFO nopCommerce - ******* Triggering Log in button *******
+2023-09-11 13:37:50,357 [main] INFO nopCommerce - ******* Launching Browser *******
+2023-09-11 13:37:50,380 [main] INFO nopCommerce - ******* Opening URL *******
+2023-09-11 13:37:51,235 [main] INFO nopCommerce - ******* Providing email and password *******
+2023-09-11 13:37:51,403 [main] INFO nopCommerce - ******* Triggering Log in button *******
+2023-09-11 13:37:56,064 [main] INFO nopCommerce - ******* Trigger Add customer button *******
+2023-09-11 13:37:58,315 [main] INFO nopCommerce - ******* Adding new customer information *******
+2023-09-11 13:38:01,853 [main] INFO nopCommerce - ******* Triggering save button *******
+2023-09-11 13:38:03,850 [main] INFO nopCommerce - ******* Launching Browser *******
+2023-09-11 13:38:03,853 [main] INFO nopCommerce - ******* Opening URL *******
+2023-09-11 13:38:04,562 [main] INFO nopCommerce - ******* Providing email and password *******
+2023-09-11 13:38:04,716 [main] INFO nopCommerce - ******* Triggering Log in button *******
+2023-09-11 13:38:08,934 [main] INFO nopCommerce - ******* Searching customer email *******
+2023-09-11 13:38:11,975 [main] INFO nopCommerce - ******* Launching Browser *******
+2023-09-11 13:38:11,977 [main] INFO nopCommerce - ******* Opening URL *******
+2023-09-11 13:38:12,879 [main] INFO nopCommerce - ******* Providing email and password *******
+2023-09-11 13:38:13,037 [main] INFO nopCommerce - ******* Triggering Log in button *******
+2023-09-11 13:38:16,526 [main] INFO nopCommerce - ******* Searching customer first name *******
+2023-09-11 13:38:16,608 [main] INFO nopCommerce - ******* Searching customer last name *******
+2023-09-11 13:38:19,620 [main] INFO nopCommerce - ******* Launching Browser *******
+2023-09-11 13:38:19,621 [main] INFO nopCommerce - ******* Opening URL *******
+2023-09-11 13:38:20,502 [main] INFO nopCommerce - ******* Providing email and password *******
+2023-09-11 13:38:20,660 [main] INFO nopCommerce - ******* Triggering Log in button *******
+2023-09-11 13:38:27,775 [main] INFO nopCommerce - ******* Launching Browser *******
+2023-09-11 13:38:27,776 [main] INFO nopCommerce - ******* Opening URL *******
+2023-09-11 13:38:28,985 [main] INFO nopCommerce - ******* Providing email and password *******
+2023-09-11 13:38:29,159 [main] INFO nopCommerce - ******* Triggering Log in button *******
+2023-09-11 13:38:36,419 [main] INFO nopCommerce - ******* Launching Browser *******
+2023-09-11 13:38:36,420 [main] INFO nopCommerce - ******* Opening URL *******
+2023-09-11 13:38:37,575 [main] INFO nopCommerce - ******* Providing email and password *******
+2023-09-11 13:38:37,737 [main] INFO nopCommerce - ******* Triggering Log in button *******
+2023-09-11 13:41:12,784 [main] INFO nopCommerce - ******* Launching Browser *******
+2023-09-11 13:41:12,808 [main] INFO nopCommerce - ******* Opening URL *******
+2023-09-11 13:41:13,648 [main] INFO nopCommerce - ******* Providing email and password *******
+2023-09-11 13:41:13,830 [main] INFO nopCommerce - ******* Triggering Log in button *******
+2023-09-11 13:41:18,036 [main] INFO nopCommerce - ******* Trigger Add customer button *******
+2023-09-11 13:41:19,733 [main] INFO nopCommerce - ******* Adding new customer information *******
+2023-09-11 13:41:23,273 [main] INFO nopCommerce - ******* Triggering save button *******
+2023-09-11 13:41:25,321 [main] INFO nopCommerce - ******* Launching Browser *******
+2023-09-11 13:41:25,323 [main] INFO nopCommerce - ******* Opening URL *******
+2023-09-11 13:41:26,421 [main] INFO nopCommerce - ******* Providing email and password *******
+2023-09-11 13:41:26,578 [main] INFO nopCommerce - ******* Triggering Log in button *******
+2023-09-11 13:41:30,857 [main] INFO nopCommerce - ******* Searching customer email *******
+2023-09-11 13:41:33,902 [main] INFO nopCommerce - ******* Launching Browser *******
+2023-09-11 13:41:33,904 [main] INFO nopCommerce - ******* Opening URL *******
+2023-09-11 13:41:34,785 [main] INFO nopCommerce - ******* Providing email and password *******
+2023-09-11 13:41:34,999 [main] INFO nopCommerce - ******* Triggering Log in button *******
+2023-09-11 13:41:39,149 [main] INFO nopCommerce - ******* Searching customer first name *******
+2023-09-11 13:41:39,275 [main] INFO nopCommerce - ******* Searching customer last name *******
+2023-09-11 13:41:42,384 [main] INFO nopCommerce - ******* Launching Browser *******
+2023-09-11 13:41:42,385 [main] INFO nopCommerce - ******* Opening URL *******
+2023-09-11 13:41:43,196 [main] INFO nopCommerce - ******* Providing email and password *******
+2023-09-11 13:41:43,357 [main] INFO nopCommerce - ******* Triggering Log in button *******
+2023-09-11 13:41:49,600 [main] INFO nopCommerce - ******* Launching Browser *******
+2023-09-11 13:41:49,601 [main] INFO nopCommerce - ******* Opening URL *******
+2023-09-11 13:41:50,420 [main] INFO nopCommerce - ******* Providing email and password *******
+2023-09-11 13:41:50,594 [main] INFO nopCommerce - ******* Triggering Log in button *******
+2023-09-11 13:41:56,694 [main] INFO nopCommerce - ******* Launching Browser *******
+2023-09-11 13:41:56,695 [main] INFO nopCommerce - ******* Opening URL *******
+2023-09-11 13:41:57,500 [main] INFO nopCommerce - ******* Providing email and password *******
+2023-09-11 13:41:57,650 [main] INFO nopCommerce - ******* Triggering Log in button *******
+2023-09-11 13:48:27,282 [main] INFO nopCommerce - ******* Launching Browser *******
+2023-09-11 13:48:27,305 [main] INFO nopCommerce - ******* Opening URL *******
+2023-09-11 13:48:28,221 [main] INFO nopCommerce - ******* Providing email and password *******
+2023-09-11 13:48:28,392 [main] INFO nopCommerce - ******* Triggering Log in button *******
+2023-09-11 13:48:32,376 [main] INFO nopCommerce - ******* Trigger Add customer button *******
+2023-09-11 13:48:34,200 [main] INFO nopCommerce - ******* Adding new customer information *******
+2023-09-11 13:48:37,802 [main] INFO nopCommerce - ******* Triggering save button *******
+2023-09-11 13:48:39,688 [main] INFO nopCommerce - ******* Launching Browser *******
+2023-09-11 13:48:39,691 [main] INFO nopCommerce - ******* Opening URL *******
+2023-09-11 13:48:40,671 [main] INFO nopCommerce - ******* Providing email and password *******
+2023-09-11 13:48:40,845 [main] INFO nopCommerce - ******* Triggering Log in button *******
+2023-09-11 13:48:45,210 [main] INFO nopCommerce - ******* Searching customer email *******
+2023-09-11 13:48:48,373 [main] INFO nopCommerce - ******* Launching Browser *******
+2023-09-11 13:48:48,374 [main] INFO nopCommerce - ******* Opening URL *******
+2023-09-11 13:48:49,129 [main] INFO nopCommerce - ******* Providing email and password *******
+2023-09-11 13:48:49,300 [main] INFO nopCommerce - ******* Triggering Log in button *******
+2023-09-11 13:48:53,681 [main] INFO nopCommerce - ******* Searching customer first name *******
+2023-09-11 13:48:53,774 [main] INFO nopCommerce - ******* Searching customer last name *******
+2023-09-11 13:48:56,909 [main] INFO nopCommerce - ******* Launching Browser *******
+2023-09-11 13:48:56,910 [main] INFO nopCommerce - ******* Opening URL *******
+2023-09-11 13:48:57,482 [main] INFO nopCommerce - ******* Providing email and password *******
+2023-09-11 13:48:57,647 [main] INFO nopCommerce - ******* Triggering Log in button *******
+2023-09-11 13:49:04,106 [main] INFO nopCommerce - ******* Launching Browser *******
+2023-09-11 13:49:04,107 [main] INFO nopCommerce - ******* Opening URL *******
+2023-09-11 13:49:05,256 [main] INFO nopCommerce - ******* Providing email and password *******
+2023-09-11 13:49:05,419 [main] INFO nopCommerce - ******* Triggering Log in button *******
+2023-09-11 13:49:12,206 [main] INFO nopCommerce - ******* Launching Browser *******
+2023-09-11 13:49:12,207 [main] INFO nopCommerce - ******* Opening URL *******
+2023-09-11 13:49:12,968 [main] INFO nopCommerce - ******* Providing email and password *******
+2023-09-11 13:49:13,143 [main] INFO nopCommerce - ******* Triggering Log in button *******
